@@ -1,0 +1,21 @@
+version: 0.2
+
+phases:
+  install:
+    runtime-versions:
+      nodejs: 18
+    commands:
+      - echo "[INSTALL] phase started"
+      - npm install
+      - echo "[INSTALL] phase ended"
+  build:
+    commands:
+      - echo "[BUILD] phase started"
+      - npm run build
+      - echo "[BUILD] phase started"
+
+artifacts:
+  files:
+    - dist/**/*
+    - package.json
+    - .platform/**/*
